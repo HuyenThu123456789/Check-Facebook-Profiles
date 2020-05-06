@@ -11,7 +11,7 @@
         {
             $id = (explode('/', $url))[3];
             if (!file_exists("./TMHDetector-master/data/{$id}/outfile.txt"))
-                exec("cd TMHDetector-master && py Client.py {$id} --output ./data/{$id}/outfile.txt");
+                exec("cd TMHDetector-master && python Client.py {$id} --output ./data/{$id}/outfile.txt");
             do {}
             while (!file_exists("./TMHDetector-master/data/{$id}/outfile.txt"));
 
